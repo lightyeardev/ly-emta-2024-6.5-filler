@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "EMTA 2024 tax report 6.5 filler",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://tuludeklaratsioon.emta.ee/fidek24-client/declaration"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
