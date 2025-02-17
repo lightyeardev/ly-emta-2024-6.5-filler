@@ -1,10 +1,9 @@
 {
     "manifest_version": 3,
     "name": "EMTA 2024 tax report 6.5 filler",
-    "version": "1.0",
+    "version": "1.1",
     "permissions": [
-        "activeTab",
-        "scripting"
+        "activeTab"
     ],
     "action": {
         "default_popup": "popup.html"
