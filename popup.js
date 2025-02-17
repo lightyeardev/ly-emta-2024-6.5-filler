@@ -43,8 +43,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const [tab] = await chrome.tabs.query({
         active: true,
-        currentWindow: true,
+        lastFocusedWindow: true,
       });
+
+      console.log("🔎 Found active tab:", tab);
+
+      if (!tab) {
+        console.error("❌ No active tab found");
+        progressDiv.textContent =
+          "No active tab found. Refresh the page and try again.";
+        progressDiv.style.display = "block";
+        return;
+      }
+
       console.log("🎯 Target tab found:", tab.url);
 
       for (let i = 0; i < dataRows.length; i++) {
@@ -100,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
       stopButton.style.display = "none";
       stopButton.disabled = false;
       stopButton.textContent = "Stop";
-      progressDiv.style.display = "none";
+      // progressDiv.style.display = "none";
       shouldStop = false;
     }
   });
