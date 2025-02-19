@@ -4,9 +4,9 @@ A chrome extension that automatically adds all the rows from your Lightyear stat
 
 ## Installation
 
-### 🚧 From the Chrome Web Store
+### From the Chrome Web Store
 
-Will be available soon!
+Download [link](https://chromewebstore.google.com/detail/emta-2024-tax-report-65-f/gglidgedbjadpgojkpgpkdneldniiocp)
 
 ### Manual Installation
 
